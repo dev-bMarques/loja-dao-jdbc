@@ -52,22 +52,19 @@ public class DB {
 		if (st != null) {
 			try {
 				st.close();
-			} 
-			catch (SQLException e) {
+			} catch (SQLException e) {
 				throw new DbException(e.getMessage());
-			}
-			}
-			}
-			
-	public static void closeResultSet(ResultSet rs) {
-				if (rs != null) {
-					try {
-						rs.close();
-					} 
-					catch (SQLException e) {
-						throw new DbException(e.getMessage());
 			}
 		}
 	}
 
+	public static void closeResultSet(ResultSet rs) {
+		if (rs != null) {
+			try {
+				rs.close();
+			} catch (SQLException e) {
+				throw new DbException(e.getMessage());
+			}
+		}
+	}
 }
